@@ -17,10 +17,10 @@ describe('lower-case Node', function () {
 
     const flow = [
         {
-            id: "TasmotaZigbeeMqqt", type: "tasmota-zigbee-msgsplit", name: "TasmotaZigbeeMqqtName",
-            wires: [["AquaraTempSensor"]]
+            id: "EGoChargerId", type: "e-go-charger", name: "EGoChargerName",
+            wires: [["EGoChargerMqqtProvider"]]
         },
-        { id: "AquaraTempSensor", type: "helper" }
+        { id: "EGoChargerMqqtProvider", type: "helper" }
 
     ];
 
@@ -31,18 +31,18 @@ describe('lower-case Node', function () {
     };
 
     it('should be loaded', function (done) {
-        var flow = [{ id: "TasmotaZigbeeMqqt", type: "tasmota-zigbee-msgsplit", name: "TasmotaZigbeeMqqtName" }];
+        var flow = [{ id: "EGoChargerId", type: "e-go-charger", name: "EGoChargerName" }];
         helper.load(lowerNode, flow, function () {
-            var underTestNode = helper.getNode("TasmotaZigbeeMqqt");
-            underTestNode.should.have.property('name', 'TasmotaZigbeeMqqtName');
+            var underTestNode = helper.getNode("EGoChargerId");
+            underTestNode.should.have.property('name', 'EGoChargerName');
             done();
         });
     });
 
     it('should return Device', function (done) {
         helper.load(lowerNode, flow, function () {
-            var helperNode = helper.getNode("AquaraTempSensor");
-            var underTestNode = helper.getNode("TasmotaZigbeeMqqt");
+            var helperNode = helper.getNode("EGoChargerMqqtProvider");
+            var underTestNode = helper.getNode("EGoChargerId");
 
             helperNode.on("input", function (msg) {
 
