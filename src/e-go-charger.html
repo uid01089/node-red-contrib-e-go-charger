@@ -1,0 +1,50 @@
+<!--See https://nodered.org/docs/creating-nodes/node-html-->
+
+<script type="text/javascript">
+    RED.nodes.registerType('e-go-charger', {
+        category: 'function',
+        color: '#a6bbcf',
+        defaults: {
+            name: { value: "" }
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "file.png",
+        label: function () {
+            return this.name || "e-go-charger";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="e-go-charger">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="e-go-charger">
+    <p>
+        Input is a message mqqt message object containing different payloads:
+        <code>
+        const testMsg = {
+            payload: '{"ZbReceived":{"0x6DBE":{"Device":"0x6DBE","Name":"TmpSens1","BatteryVoltage":3.005,"BatteryPercentage":100,"Voltage":3.005,"Battery":100,"Temperature":27.17,"Humidity":51.87,"Endpoint":1,"LinkQuality":39}}}'
+        };
+        </code>
+        
+        te-go-charger reads in the data containing the bunch of paylaods, 
+        separates the single payload and provided the certain separated information.
+        <br>
+        
+        
+    </p>
+    <h3>Outputs</h3>
+     <ol class="node-ports">
+         <li>Standard output
+             <dl class="message-properties">
+                 <dt>Payload <span class="property-type">string</span></dt>
+                 <dd>the standard output of the command.</dd>
+             </dl>
+         </li>
+     </ol>
+</script>
