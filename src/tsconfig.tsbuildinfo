@@ -177,8 +177,8 @@
         "affectsGlobalScope": false
       },
       "../src_ts/egocharger.ts": {
-        "version": "3b88b932f4fe2325cdd62ca2c17f2d399e182109e9e61ee2d1954d1e74ef2073",
-        "signature": "608d0448d26a7b480b2f81c7341c49ebb25ffd9aaad8c4157d1e783ad70181bb",
+        "version": "e5673b4e122c473e6cb872b25af936cf7ab57567a0e9a16db841a0a508e3685d",
+        "signature": "83ce7d700d5b9d2d56e482b028d8034418e11fc8f83995d183578989315f2b87",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/node/globals.d.ts": {
@@ -623,6 +623,7 @@
       ],
       "../src_ts/egocharger.ts": [
         "../src_ts/egochargermqqttype.ts",
+        "../src_ts/influxdbbatchelement.ts",
         "../src_ts/influxdbegocharger.ts"
       ],
       "../src_ts/influxdbegocharger.ts": [
@@ -804,7 +805,7 @@
       ],
       "../src_ts/egocharger.ts": [
         "../src_ts/egochargermqqttype.ts",
-        "../src_ts/influxdbegocharger.ts"
+        "../src_ts/influxdbbatchelement.ts"
       ],
       "../src_ts/influxdbegocharger.ts": [
         "../src_ts/egochargermqqttype.ts",

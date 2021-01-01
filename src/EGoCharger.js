@@ -7,7 +7,9 @@ class EGoCharger {
         //
     }
     getMessageForInfluxDb(message) {
-        return InfluxDBEGoCharger_1.InfluxDBEGoChargerImpl.getInfluxDB(message);
+        const influxElements = [];
+        influxElements.push(InfluxDBEGoCharger_1.InfluxDBEGoChargerImpl.getInfluxDB(message));
+        return influxElements;
     }
 }
 exports.EGoCharger = EGoCharger;

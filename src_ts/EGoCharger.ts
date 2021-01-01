@@ -1,5 +1,6 @@
 import { EGoChargerMqqtType } from "./EGoChargerMqqtType";
-import { InfluxDBEGoCharger, InfluxDBEGoChargerImpl } from "./InfluxDBEGoCharger";
+import { InfluxDBBatchElement } from "./InfluxDBBatchElement";
+import { InfluxDBEGoChargerImpl } from "./InfluxDBEGoCharger";
 
 
 
@@ -11,8 +12,12 @@ class EGoCharger {
     }
 
 
-    getMessageForInfluxDb(message: EGoChargerMqqtType): InfluxDBEGoCharger {
-        return InfluxDBEGoChargerImpl.getInfluxDB(message);
+    getMessageForInfluxDb(message: EGoChargerMqqtType): InfluxDBBatchElement[] {
+        const influxElements: InfluxDBBatchElement[] = [];
+
+        influxElements.push(InfluxDBEGoChargerImpl.getInfluxDB(message));
+
+        return influxElements;
     }
 
 }
