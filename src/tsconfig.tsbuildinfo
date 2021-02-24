@@ -172,7 +172,7 @@
         "affectsGlobalScope": false
       },
       "../src_ts/influxdbegocharger.ts": {
-        "version": "ddc19161cea132189196d674de6a1297c00c82f665d551f8a03b7a74d981237e",
+        "version": "a02af3928e895e3c6b0a0affb7682da3d005f564b6fa73f4040fa7ea0c7c3b83",
         "signature": "6538cd92281d068d3e54eca4b4686ab181c932bbdb9dc6b17f3ee33db756027d",
         "affectsGlobalScope": false
       },
