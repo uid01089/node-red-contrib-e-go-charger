@@ -12,6 +12,8 @@ class InfluxDBEGoChargerImpl {
                 powerL1: data.nrg[7] * 100,
                 powerL2: data.nrg[8] * 100,
                 powerL3: data.nrg[9] * 100,
+                status: parseInt(data.car),
+                rebootCtr: parseInt(data.rbc)
             }
         };
         return influxElement;
