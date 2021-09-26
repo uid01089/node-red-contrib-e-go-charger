@@ -172,8 +172,8 @@
         "affectsGlobalScope": false
       },
       "../src_ts/influxdbegocharger.ts": {
-        "version": "200eebdded2593a6395554f8458c06745596a21e5c86b2ccbc99289f02059969",
-        "signature": "12528b81d466a684e9866317e504c3a726492bcb8fca88805826c1276b189601",
+        "version": "59d738015369f521ab2bcae11592fb5353e74741b85354c6c3e48ad1239ce0a9",
+        "signature": "443f201bd39ee5be44823282ae7c1d1670abd13a5b122145abe7fbbf6117cbfd",
         "affectsGlobalScope": false
       },
       "../src_ts/egocharger.ts": {

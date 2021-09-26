@@ -10,14 +10,15 @@ interface InfluxDBEGoCharger extends InfluxDBBatchElement {
         powerL2: number;
         powerL3: number;
         /**
-Status PWM Signaling
-1: charging station ready, no vehicle
-2: vehicle loads
-3: Waiting for vehicle
-4: Charge finished, vehicle still connected
-*/
+        Status PWM Signaling
+        1: charging station ready, no vehicle
+        2: vehicle loads
+        3: Waiting for vehicle
+        4: Charge finished, vehicle still connected
+        */
         status: number;
         rebootCtr: number;
+        allowCharging: boolean;
     }
 }
 
@@ -33,7 +34,8 @@ class InfluxDBEGoChargerImpl {
                 powerL2: data.nrg[8] * 100,
                 powerL3: data.nrg[9] * 100,
                 status: parseInt(data.car),
-                rebootCtr: parseInt(data.rbc)
+                rebootCtr: parseInt(data.rbc),
+                allowCharging: (data.alw === "1" ? true : false)
             }
         }
 
